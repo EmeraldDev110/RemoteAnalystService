@@ -1,0 +1,1 @@
+Stop-Service -DisplayName "Remote Analyst *"

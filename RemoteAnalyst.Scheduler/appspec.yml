@@ -1,0 +1,12 @@
+version: 0.0
+os: windows
+files:
+  - source: RemoteAnalystScheduler
+    destination: C:\Program Files (x86)\Idelji Corporation\Scheduler\
+    overwrite: true
+hooks:
+  BeforeInstall:
+    - location: ./ScriptBeforeInstall.ps1
+  AfterInstall:
+    - location: ./ScriptAfterInstall.ps1
+      timeout: 160

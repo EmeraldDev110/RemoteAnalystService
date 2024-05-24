@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69A735E7-AEF6-4F7E-9A60-F75AC4D48EFD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RemoteAnalyst.SFTP</RootNamespace>
+    <AssemblyName>RemoteAnalyst.SFTP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RDSMove|AnyCPU'">
+    <OutputPath>bin\RDSMove\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EVALUATION_COPY|AnyCPU'">
+    <OutputPath>bin\EVALUATION_COPY\</OutputPath>
+    <DefineConstants>TRACE;EVALUATION_COPY</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox, Version=14.0.288.0, Culture=neutral, PublicKeyToken=dd7d30884001c5e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SecureBlackbox.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.SFTP, Version=14.0.288.0, Culture=neutral, PublicKeyToken=dd7d30884001c5e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SecureBlackbox.SFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.SFTPCommon, Version=14.0.288.0, Culture=neutral, PublicKeyToken=dd7d30884001c5e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SecureBlackbox.SFTPCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.SFTPServer, Version=14.0.288.0, Culture=neutral, PublicKeyToken=dd7d30884001c5e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SecureBlackbox.SFTPServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.SSHCommon, Version=14.0.288.0, Culture=neutral, PublicKeyToken=dd7d30884001c5e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SecureBlackbox.SSHCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.SSHServer, Version=14.0.288.0, Culture=neutral, PublicKeyToken=dd7d30884001c5e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SecureBlackbox.SSHServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DemoSettings.cs" />
+    <Compile Include="BLL\Globals.cs" />
+    <Compile Include="BLL\ServerListener.cs" />
+    <Compile Include="BLL\SFTP.cs" />
+    <Compile Include="BLL\SFTPSession.cs" />
+    <Compile Include="BLL\SSHSession.cs" />
+    <Compile Include="BLL\UserInfo.cs" />
+    <Compile Include="BLL\Utils.cs" />
+    <Compile Include="SFTPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SFTPForm.Designer.cs">
+      <DependentUpon>SFTPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SFTPInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SFTPInstaller.Designer.cs">
+      <DependentUpon>SFTPInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SFTPService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SFTPService.Designer.cs">
+      <DependentUpon>SFTPService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\SecureBlackbox.dll" />
+    <Content Include="bin\SecureBlackbox.SFTP.dll" />
+    <Content Include="bin\SecureBlackbox.SFTPCommon.dll" />
+    <Content Include="bin\SecureBlackbox.SFTPServer.dll" />
+    <Content Include="bin\SecureBlackbox.SSHCommon.dll" />
+    <Content Include="bin\SecureBlackbox.SSHServer.dll" />
+    <Content Include="changes.txt" />
+    <Content Include="LicenseKey.txt" />
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SFTPForm.resx">
+      <DependentUpon>SFTPForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
