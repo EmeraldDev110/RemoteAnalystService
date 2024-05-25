@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TrendExpandInterval" table="trendexpandinterval">
+		<composite-id>
+			<key-property name="Interval" column="`Interval`" type ="datetime"/>
+			<key-property name ="DeviceName" column="DeviceName" type="string" length="45" />
+		</composite-id>
+		<property name="TransmitPackets" type="double" />
+		<property name="RetransmitPackets" type="double" />
+	</class>
+	
+	<class name="TrendExpandHourly" table="trendapplicationhourly">
+		<composite-id>
+			<key-property name="Hour" column="Hour" type ="datetime"/>
+			<key-property name ="DeviceName" column="DeviceName" type="string" length="45" />
+		</composite-id>
+		<property name="PeakTransmitPackets" type="double" />
+		<property name="AverageTransmitPackets" type="double" />
+		<property name="PeakRetransmitPackets" type="double" />
+		<property name="AverageRetransmitPackets" type="double" />
+	</class>
+</hibernate-mapping>

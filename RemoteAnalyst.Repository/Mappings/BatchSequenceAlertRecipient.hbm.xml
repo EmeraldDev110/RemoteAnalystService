@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="BatchSequenceAlertRecipient" table="batchsequencealertrecipients">
+		<composite-id>
+			<key-property name="BatchSequenceProfileId" column="BatchSequenceProfileId" type="int" />
+			<key-property name="EmailAddress" type="string" length="255" />
+		</composite-id>
+		<!--<many-to-one name="BatchProfile"
+				class="BatchSequenceProfile"
+				column="BatchSequenceProfileId"
+				insert="false"
+				update="false"
+				not-null="true"/>-->
+	</class>
+</hibernate-mapping>

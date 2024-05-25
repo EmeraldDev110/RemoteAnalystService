@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="ProcessAlert" table="processalerts">
+		<composite-id>
+			<key-property name="AlertID" type="int" />
+			<key-property name="System" type="string" length="10" />
+			<key-property name="DateTime" type="datetime" />
+			<key-property name="Interval" column="`Interval`" type="int" />
+			<key-property name="ProcessName" type="string" length="8" />
+			<key-property name="PercentBusy" type="double" />
+		</composite-id>
+		<property name="ProgramName" type="string" length="40" />
+		<property name="AncestorProcessName" type="string" length="8" />
+		<property name="AncestorProgramName" type="string" length="40" />
+		<property name="Duration" type="float" />
+	</class>
+</hibernate-mapping>

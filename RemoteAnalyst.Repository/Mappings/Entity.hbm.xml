@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="Entity" table="entities">
+		<id name="EntityID" column="EntityID">
+			<generator class="native" />
+		</id>
+		<property name="EntityName" type="string" length="7" />
+	</class>
+</hibernate-mapping>

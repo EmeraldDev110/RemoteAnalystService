@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="BatchSequenceAlertProgram" table="batchsequencealertprograms">
+		<composite-id>
+			<key-property name="BatchSequenceProfileId" column="BatchSequenceProfileId" type="int" />
+			<key-property name="ProgramFile" column="ProgramFile" type="string" length="40" />
+		</composite-id>
+		<property name="Order" type="int" />
+		<!--<many-to-one name="BatchProfile"
+				class="BatchSequenceProfile"
+				column="BatchSequenceProfileId"
+				insert="false"
+				update="false"
+				not-null="true"/>-->
+		<set name="TrendList" inverse="true">
+			<key>
+				<column name="BatchSequenceProfileId"/>
+				<column name="ProgramFile"/>
+			</key>
+			<one-to-many class="BatchSequenceTrend"/>
+		</set>
+	</class>
+</hibernate-mapping>

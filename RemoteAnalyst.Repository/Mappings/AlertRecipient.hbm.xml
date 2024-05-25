@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="AlertRecipient" table="alertrecipients">
+		<id name="Id" column="IdAlertRecipients">
+			<generator class="native" />
+		</id>
+		<property name="IdProcessWatchAlerts" type="int"/>
+		<property name="SystemSerial" type="string" length="16" not-null="true" />
+		<property name="Email" type="string" length="45" not-null="true" />
+	</class>
+</hibernate-mapping>

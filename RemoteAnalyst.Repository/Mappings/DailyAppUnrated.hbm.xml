@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="DailyAppUnrated" table="dailyappunrated">
+		<composite-id>
+			<key-property name ="SystemSerialNum" column="SystemSerialNum" type="string" length="10" />
+			<key-property name="AppId" column="AppId" type ="int"/>
+			<key-property name="DataDate" column="DataDate" type ="datetime"/>
+			<key-property name="AttributeID" column="AttributeID" type ="int"/>
+		</composite-id>
+		<property name="AvgVal"/>
+		<property name="Hour0"/>
+		<property name="Hour1"/>
+		<property name="Hour2"/>
+		<property name="Hour3"/>
+		<property name="Hour4"/>
+		<property name="Hour5"/>
+		<property name="Hour6"/>
+		<property name="Hour7"/>
+		<property name="Hour8"/>
+		<property name="Hour9"/>
+		<property name="Hour10"/>
+		<property name="Hour11"/>
+		<property name="Hour12"/>
+		<property name="Hour13"/>
+		<property name="Hour14"/>
+		<property name="Hour15"/>
+		<property name="Hour16"/>
+		<property name="Hour17"/>
+		<property name="Hour18"/>
+		<property name="Hour19"/>
+		<property name="Hour20"/>
+		<property name="Hour21"/>
+		<property name="Hour22"/>
+		<property name="Hour23"/>
+		<property name="PeakHour"/>
+		<property name="NumHours"/>
+	</class>
+</hibernate-mapping>

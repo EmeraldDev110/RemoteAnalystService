@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="QuickNetworkMonitor"
+                   namespace="QuickNetworkMonitor.Models">
+
+  <class name="QNMTCPv6Detail" table="QNM_TCPv6Detail">
+    <id name="Id" column="Id">
+      <generator class="native" />
+    </id>
+    <property name="MonitorName" column="[Monitor Name]" type="string" length="50" not-null="true"/>
+    <property name="SentBytes" column="[Sent Bytes]" type="float" not-null="true"/>
+    <property name="ReceivedBytes" column="[Received Bytes]" type="float" not-null="true"/>
+    <property name="ReceivedOutOfOrderBytes" column="[Received Out of Order Bytes]" type="float" not-null="true"/>
+    <property name="Reset" column="Reset" type="char" not-null="true"/>
+    <property name="DateTime" column="[Date Time]" type="DateTime" not-null="true"/>
+  </class>
+</hibernate-mapping>

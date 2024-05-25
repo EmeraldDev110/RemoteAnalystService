@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="PvCpuOnce" table="pvcpuonce">
+		<composite-id>
+			<key-property name ="FromTimestamp" column="FromTimestamp" type="datetime"/>
+			<key-property name="ToTimestamp" column="ToTimestamp" type ="datetime"/>
+			<key-property name="CpuNumber" column="CpuNumber" type ="string"/>
+		</composite-id>
+		<property name="ProcessorType"/>
+		<property name="SoftwareVersion"/>
+		<property name="PageSize"/>
+		<property name="MemorySize"/>
+		<property name="LocalTimeOffset"/>
+		<property name="ElapsedTime"/>
+	</class>
+</hibernate-mapping>

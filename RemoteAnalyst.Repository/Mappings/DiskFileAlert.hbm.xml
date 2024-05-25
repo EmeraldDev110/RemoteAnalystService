@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="DiskFileAlert" table="diskfilealerts">
+		<composite-id>
+			<key-property name="AlertID" type="int" />
+			<key-property name="System" type="string" length="10" />
+			<key-property name="DateTime" type="datetime" />
+			<key-property name="Interval" column="`Interval`" type="int" />
+			<key-property name="DiskFile" type="string" length="8" />
+		</composite-id>
+		<property name="IO" type="double" />
+	</class>
+</hibernate-mapping>

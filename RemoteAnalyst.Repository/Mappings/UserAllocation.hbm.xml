@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="UserAllocation" table="UserAllocation">
+		<composite-id>
+			<key-property name ="UA_SystemSerialNum" column="UA_SystemSerialNum" type="string" length="10"/>
+			<key-property name="UA_DiskName" column="UA_DiskName" type ="string" length="10"/>
+			<key-property name="UA_Group" column="UA_Group" type ="int"/>
+			<key-property name="UA_User" column="UA_User" type ="int"/>
+		</composite-id>
+		<property name="UA_UserName"/>
+		<property name="UA_UsedMB"/>
+		<property name="UA_FileCount"/>
+	</class>
+</hibernate-mapping>

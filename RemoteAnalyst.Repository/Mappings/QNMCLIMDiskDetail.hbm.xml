@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="QuickNetworkMonitor"
+                   namespace="QuickNetworkMonitor.Models">
+
+  <class name="QNMCLIMDiskDetail" table="QNM_CLIMDiskDetail">
+    <id name="Id" column="Id">
+      <generator class="native" />
+    </id>
+    <property name="CLIMName" column="[CLIM Name]" type="string" length="50" not-null="true"/>
+    <property name="Size" column="Size" type="float" not-null="true"/>
+    <property name="Used" column="Used" type="float" not-null="true"/>
+    <property name="DateTime" column="[Date Time]" type="DateTime" not-null="true"/>
+  </class>
+</hibernate-mapping>

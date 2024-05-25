@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TrendTCPProcessInterval" table="trendtcpprocessinterval">
+		<composite-id>
+			<key-property name="Interval" column="`Interval`" type ="datetime"/>
+			<key-property name ="ProcessName" column="ProcessName" type="string" length="45"/>
+		</composite-id>
+		<property name="TotalBytes" type="double" />
+	</class>
+	
+	<class name="TrendTCPProcessHourly" table="trendtcpprocesshourly">
+		<composite-id>
+			<key-property name="Hour" column="Hour" type ="datetime"/>
+			<key-property name ="ProcessName" column="ProcessName" type="string" length="45"/>
+		</composite-id>
+		<property name="PeakTotalBytes" type="double" />
+		<property name="AverageTotalBytes" type="double" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="ProcessEntity" table="[dailyTableName]">
+		<id name="EntityCounterID" column="EntityCounterID">
+			<generator class="native" />
+		</id>
+		<property name="SystemName" type="string" length="8"/>
+		<property name="CpuNum" type="int"/>
+		<property name="OSLetter" type="string" length="1"/>
+		<property name="OSNumber" type="int"/>
+		<property name="FromTimestamp" type="datetime"/>
+		<property name="ToTimestamp" type="datetime"/>
+		<property name="DeltaTime" type="double"/>
+		<property name="CpuBusyTime" type="double" />
+		<property name="ReadyTime" type="double" />
+		<property name="MemQtime" type="double" />
+		<property name="Dispatches" type="double" />
+		<property name="PageFaults" type="double" />
+		<property name="PresPagesQTime" type="double" />
+		<property name="RecvQTime" type="double" />
+		<property name="MessagesSent" type="double" />
+		<property name="SentBytesF" type="double" />
+		<property name="ReturnedBytesF" type="double" />
+		<property name="MessagesReceived" type="double" />
+		<property name="ReceivedBytesF" type="double" />
+		<property name="ReplyBytesF" type="double" />
+		<property name="LcbsInUseQTime" type="double" />
+		<property name="CheckPoints" type="double" />
+		<property name="CompTraps" type="double" />
+		<property name="TnsrBusyTime" type="double" />
+		<property name="AccelBusyTime" type="double" />
+		<property name="TnsBusyTime" type="double" />
+		<property name="FileOpenCalls" type="double" />
+		<property name="BeginTrans" type="double" />
+		<property name="AbortTrans" type="double" />
+		<property name="PresPagesStart" type="int" />
+		<property name="PresPagesEnd" type="int" />
+		<property name="OssnsRequests" type="double" />
+		<property name="OssnsWaitTime" type="double" />
+		<property name="OssnsRedirects" type="double" />
+		<property name="Launches" type="double" />
+		<property name="LaunchWaitTime" type="double" />
+		<property name="OpenCloseWaitTime" type="double" />
+		<property name="IpuSwitches" type="double" />
+		<property name="IpuNum" type="int" />
+		<property name="IpuNumPrev" type="int" />
+		<property name="LockedPagesQtime" type="double" />
+		<property name="LockedPagesStart" type="double" />
+		<property name="LockedPagesEnd" type="double" />
+		<property name="Pin" type="int" />
+		<property name="Priority" type="int" />
+		<property name="Group" type="int" />
+		<property name="User" type="int" />
+		<property name="ProcessName" type="string" length="8" />
+		<property name="Volume" type="string" length="8" />
+		<property name="SubVol" type="string" length="8" />
+		<property name="FileName" type="string" length="8" />
+		<property name="OssPid" type="int" />
+		<property name="AncestorCpu" type="int" />
+		<property name="AncestorPin" type="int" />
+		<property name="AncestorSysName" type="string" length="8" />
+		<property name="AncestorProcessName" type="string" length="8" />
+		<property name="DeviceName" type="string" length="8" />
+		<property name="PathID" type="string" length="24" />
+		<property name="Crvsn" type="string" length="6" />
+		<property name="ProgramAccelerated" type="int" />
+		<property name="Ipus" type="int" />
+		<property name="HomeTermSysName" type="string" length="8" />
+		<property name="Device" type="string" length="8" />
+		<property name="SubDevice" type="string" length="8" />
+		<property name="Qualifier" type="string" length="8" />
+		<property name="UniqueID" type="long" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TrendProgramInterval" table="TrendProgramInterval">
+		<composite-id>
+			<key-property name ="ProgramProfileId" column="ProgramProfileId" type="int"/>
+			<key-property name="Interval" column="Interval" type ="datetime"/>
+			<key-property name ="CpuNum" column="CpuNum" type="int"/>
+			<key-property name="Pin" column="Pin" type ="int"/>
+			<key-property name ="ProcessName" column="ProcessName" type="string" length="8"/>
+			<key-property name ="Volume" column="Volume" type="string" length="8"/>
+			<key-property name ="SubVolume" column="SubVolume" type="string" length="8"/>
+			<key-property name ="FileName" column="FileName" type="string" length="8"/>
+		</composite-id>
+		<property name="CPUBusy"/>
+		<property name="QueueLength"/>
+		<property name="MsgRecdRate"/>
+		<property name="MsgSentRate"/>
+	</class>
+</hibernate-mapping>

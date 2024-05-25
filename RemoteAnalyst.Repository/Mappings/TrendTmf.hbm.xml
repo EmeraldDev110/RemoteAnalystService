@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TrendTmfInterval" table="trendtmfinterval">
+		<id name="Interval" column="`Interval`" type="datetime"/>
+		<property name="Complete" type="double" />
+		<property name="Abort" type="double" />
+		<property name="BeginTrans" type="long" />
+		<property name="AbortTrans" type="long" />
+		<property name="HomeTransRate" type="double" />
+		<property name="HomeTransART" type="double" />
+	</class>
+	
+	<class name="TrendTmfHourly" table="trendtmfhourly">
+		<id name="Hour" column="Hour" type="datetime"/>
+		<property name="BeginTrans" type="long" />
+		<property name="AbortTrans" type="long" />
+		<property name="HomeTransRate" type="double" />
+		<property name="HomeTransART" type="double" />
+	</class>
+</hibernate-mapping>

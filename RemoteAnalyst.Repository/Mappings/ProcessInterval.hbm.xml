@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="ProcessInterval" table="processinterval">
+		<composite-id>
+			<key-property name="SystemSerialNum" type="string" length="10" />
+			<key-property name="FromTimeStamp" type="datetime" />
+			<key-property name="Cpu" type="int" />
+			<key-property name="Pin" type="int" />
+			<key-property name="ProcessName" type="string" length="8" />
+			<key-property name="ProgramName" type="string" length="50" />
+			<key-property name="CpuBusyTime" type="float" />
+			<key-property name="DeltaTime" type="float" />
+		</composite-id>
+		<property name="DataDate" type="datetime" />
+		<property name="AncestorProcessName" type="string" length="8" />
+		<property name="AncestorProgramName" type="string" length="40" />
+		<property name="Priority" type="int" />
+		<property name="MemPages" type="float" />
+		<property name="CpuType" type="int" />
+		<property name="CpuSubtype" type="int" />
+		<property name="BCPU" type="int" />
+	</class>
+</hibernate-mapping>

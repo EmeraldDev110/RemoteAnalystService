@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="ReportQueuesAWS" table="ReportQueuesAWS">
+		<id name="QueueID" column="QueueID">
+			<generator class="native" />
+		</id>
+		<property name="Message" column="Message"/>
+		<property name="TypeID" column="TypeID"/>
+		<property name="Loading" column="Loading"/>
+		<property name="OrderDate" column="OrderDate"/>
+		<property name="InstanceID" column="InstanceID"/>
+	</class>
+</hibernate-mapping>

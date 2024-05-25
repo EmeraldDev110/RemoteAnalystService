@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="DailyDisk" table="dailydisk">
+		<composite-id>
+			<key-property name ="DD_SystemSerialNum" column="DD_SystemSerialNum" type="string" length="10"/>
+			<key-property name="DD_Date" column="DD_Date" type ="datetime"/>
+			<key-property name="DD_DiskName" column="DD_DiskName" type ="string" length="10"/>
+		</composite-id>
+		<property name="DD_UsedGB"/>
+		<property name="DD_DeltaMB"/>
+		<property name="DD_DeltaPercent"/>
+	</class>
+</hibernate-mapping>

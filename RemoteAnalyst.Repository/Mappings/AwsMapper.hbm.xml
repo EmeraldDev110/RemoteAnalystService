@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="AwsMapper" table="awsmapper">
+		<id name="MapperId" column="MapperId">
+			<generator class="native" />
+		</id>
+		<property name="AwsName" type="string" length="45" />
+		<property name="IsLoader" type="boolean"/>
+		<property name="SequenceNumber" type="int"/>
+		<property name="IsProduction" type="boolean"/>
+		<property name="IsAurora" type="boolean"/>
+		<property name="OldRDS" type="boolean"/>
+		<property name="ProdType" type="boolean"/>
+	</class>
+</hibernate-mapping>

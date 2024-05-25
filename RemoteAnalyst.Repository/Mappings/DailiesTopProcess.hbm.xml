@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="DailiesTopProcess" table="dailiestopprocesses">
+		<composite-id>
+			<key-property name="DataType" column="DataType" type="int" />
+			<key-property name="FromTimestamp" type="datetime" />
+			<key-property name="CpuNum" type="int" />
+			<key-property name="PIN" type="int" />
+			<key-property name="IpuNum" type="int" />
+			<key-property name="ProcessName" type="string" length="8" />
+			<key-property name="Priority" type="int" />
+		</composite-id>
+		<property name="Busy" type="double"/>
+		<property name="Program" type="string" length="45" />
+		<property name="ReceiveQueue" type="double"/>
+		<property name="MemUsed" type="double"/>
+		<property name="AncestorProcessName" type="string" length="8" />
+		<property name="User" type="int"/>
+		<property name="Group" type="int"/>
+	</class>
+</hibernate-mapping>

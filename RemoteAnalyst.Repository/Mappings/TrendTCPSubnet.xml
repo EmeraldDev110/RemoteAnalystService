@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TrendTCPSubnetInterval" table="trendtcpsubnetinterval">
+		<composite-id>
+			<key-property name="Interval" column="`Interval`" type ="datetime"/>
+			<key-property name ="SubnetName" column="SubnetName" type="string" length="45"/>
+		</composite-id>
+		<property name="TotalPackets" type="double" />
+	</class>
+	
+	<class name="TrendTCPSubnetHourly" table="trendtcpsubnethourly">
+		<composite-id>
+			<key-property name="Hour" column="Hour" type ="datetime"/>
+			<key-property name ="SubnetName" column="SubnetName" type="string" length="45"/>
+		</composite-id>
+		<property name="PeakTotalPackets" type="double" />
+		<property name="AverageTotalPackets" type="double" />
+	</class>
+</hibernate-mapping>

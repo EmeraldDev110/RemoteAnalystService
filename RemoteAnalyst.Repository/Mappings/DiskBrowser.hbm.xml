@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="DiskBrowser" table="[dailyTableName]">
+		<composite-id>
+			<key-property name="DeviceName" type="string" length="10" />
+			<key-property name="FromTimestamp" type="datetime" />
+			<key-property name="ToTimestamp" type="datetime" />
+		</composite-id>
+		<property name="PhysicalIORate" type="float" />
+		<property name="LogicalIORate" type="float" />
+		<property name="QueueLength" type="float" />
+		<property name="CacheHitRate" type="float" />
+		<property name="DP2Busy" type="float" />
+		<property name="BusiestFilePhysicalName" type="string" length="50" />
+		<property name="BusiestFilePhysicalIO" type="float" />
+		<property name="BusiestFileLogicalName" type="string" length="50" />
+		<property name="BusiestFileLogicalIO" type="float" />
+	</class>
+</hibernate-mapping>

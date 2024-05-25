@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="System" table="system_tbl">
+		<id name="SystemSerial" column="SystemSerial">
+		</id>
+		<property name="SystemName" column="SystemName" />
+		<property name="PlanStartDate" />
+		<property name="PlanEndDate" />
+		<property name="PlanRequest" />
+		<property name="CompanyID"/>
+		<property name="RetentionDay" />
+		<property name="UWSRetentionDay" />
+		<property name="TimeZone" />
+		<property name="CollectorDownloadUser" />
+		<property name="ExpertReport" />
+		<property name="ExpertReportRetentionDay" />
+		<property name="CollectorVersion" />
+		<property name="Evaluation" />
+		<property name="ArchiveRetention" />
+		<property name="MEASFH" />
+		<property name="TrendMonths" />
+		<property name="DateCollectorDownload" />
+		<property name="Storage" />
+		<property name="ArchiveRetentionPathway" />
+		<property name="TrendMonthsPathway" />
+		<property name="TrendMonthsStorage" />
+		<property name="IsNTS" />
+		<property name="BusinessTolerance" />
+		<property name="BatchTolerance" />
+		<property name="OtherTolerance" />
+		<property name="City" />
+		<property name="QNMRetentionDay" />
+		<property name="CountryCode" />
+		<property name="LoadLimit" />
+		<property name="AttachmentInEmail" />
+		<property name="Notes" />
+		<many-to-one name="Company"
+				class="Company"
+				column="CompanyID"
+				insert="false"
+				update="false"
+				not-null="true"/>
+	</class>
+</hibernate-mapping>

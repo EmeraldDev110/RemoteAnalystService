@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copy the template to your project folder and change it for your own use before compile tests in VisualStudio. -->
+
+<hibernate-configuration-x-factories xmlns="urn:nhibernate-configuration-2.2-x-factories">
+  <session-factory name="MySql">
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="dialect">NHibernate.Dialect.MySQLDialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.MySqlConnector.MySqlConnectorDriver, NHibernate.Driver.MySqlConnector</property>
+    <property name="connection.connection_string">Server=10.26.97.160;DataBase=pmc;uid=localanalyst;pwd=pit.Mud-1972</property>
+    <property name="show_sql">true</property>
+  </session-factory>
+
+  <session-factory name="MSSQL">
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="dialect">NHibernate.Dialect.MsSql2012Dialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <property name="connection.connection_string">Server=13.56.143.245;Database=pmc080627;User Id=localanalyst;Password=UpWork24;Trusted_Connection=False;Integrated Security=False;Encrypt=False;persist security info=True;</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+  </session-factory>
+  
+  <session-factory name="Postgres">
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="dialect">NHibernate.Dialect.PostgreSQLDialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.NpgsqlDriver</property>
+    <property name="connection.connection_string">Server=ADSL_132;DataBase=dbDev;uid=danphe;pwd=123456</property>
+    <property name="show_sql">true</property>
+  </session-factory>
+</hibernate-configuration-x-factories>

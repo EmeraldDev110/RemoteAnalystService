@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="DailyCPUData" table="dailycpudatas">
+		<composite-id>
+			<key-property name="DateTime" column="DateTime" type ="datetime"/>
+			<key-property name="CpuNumber" column="CpuNumber" type ="int"/>
+		</composite-id>
+		<property name="CPUBusy" type="double" />
+		<property name="CPUQueue" type="double" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="QuickNetworkMonitor"
+                   namespace="QuickNetworkMonitor.Models">
+
+  <class name="Analyst" table="Analysts">
+    <id name="Id" column="AnalystID">
+      <generator class="native" />
+    </id>
+    <property name="ParentCompanyId" column="ParentCompanyID" type="int" not-null="true"/>
+    <property name="Login" type="string" length="50"/>
+    <property name="Password"  type="string" length="50"/>
+    <property name="Addr1"  type="string" length="50"/>
+    <property name="Addr2"  type="string" length="50"/>
+    <property name="City"  type="string" length="50"/>
+    <property name="State"  type="string" length="50"/>
+    <property name="ZipCode"  type="string" length="50"/>
+    <property name="Country"  type="string" length="50"/>
+    <property name="PhoneNumber"  type="string" length="50"/>
+    <property name="FaxNumber"  type="string" length="50"/>
+    <property name="MobileNumber"  type="string" length="50"/>
+    <property name="Email"  type="string" length="50"/>
+    <property name="LogonLockTime" />
+    <property name="LogonAttemptCount" type="int" />
+    <property name="Visited" type="boolean"/>
+    <property name="QuickTuner" type="boolean"/>
+    <property name="NSSPAM" type="boolean"/>
+    <property name="Type" type="string" length="3"/>
+    <many-to-one name="Company"
+            class="Company"
+            column="ParentCompanyID"
+            insert="false"
+            update="false"
+            not-null="true"/>
+  </class>
+</hibernate-mapping>

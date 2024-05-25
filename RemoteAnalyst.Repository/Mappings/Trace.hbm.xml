@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="QuickNetworkMonitor"
+                   namespace="QuickNetworkMonitor.Models">
+
+  <class name="Trace">
+    <id name="Id" column="TraceID">
+      <generator class="native" />
+    </id>
+    <property name="OrderId" column="OrderID"/>
+    <property name="ProgramName" column="ProgramName"/>
+    <property name="StartTime" column="StartTime"/>
+    <property name="EndTime" column="EndTime"/>
+    <many-to-one name="Order"
+            column="OrderID"
+            insert="false"
+            update="false"
+            not-null="true"/>
+  </class>
+</hibernate-mapping>

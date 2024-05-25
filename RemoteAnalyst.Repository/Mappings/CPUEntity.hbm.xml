@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="CPUEntity" table="[dailyTableName]">
+		<id name="EntityCounterID" column="EntityCounterID">
+			<generator class="native" />
+		</id>
+		<property name="SystemName" type="string" length="8"/>
+		<property name="CpuNum" type="int"/>
+		<property name="OSLetter" type="string" length="1"/>
+		<property name="OSNumber" type="int"/>
+		<property name="FromTimestamp" type="datetime"/>
+		<property name="ToTimestamp" type="datetime"/>
+		<property name="DeltaTime" type="double"/>
+		<property name="CpuBusyTime" type="double" />
+		<property name="CpuQTime" type="double" />
+		<property name="Dispatches" type="double" />
+		<property name="Swaps" type="double" />
+		<property name="IntrBusyTime" type="double" />
+		<property name="ProcessOvhd" type="double" />
+		<property name="DiscIOsF" type="double" />
+		<property name="CacheHitsF" type="double" />
+		<property name="Transactions" type="double" />
+		<property name="ResponseTime" type="double" />
+		<property name="CompTraps" type="double" />
+		<property name="TnsrBusyTime" type="double" />
+		<property name="AccelBusyTime" type="double" />
+		<property name="TnsBusyTime" type="double" />
+		<property name="PageRequests" type="double" />
+		<property name="PageScans" type="double" />
+		<property name="MemPageScans" type="double" />
+		<property name="StartingFreeMem" type="long" />
+		<property name="EndingFreeMem" type="long" />
+		<property name="StartingUCME" type="long" />
+		<property name="EndingUCME" type="long" />
+		<property name="StartingUCL" type="long" />
+		<property name="EndingUCL" type="long" />
+		<property name="StartingSCL" type="long" />
+		<property name="EndingSCL" type="long" />
+		<property name="StartingFreeCIDs" type="long" />
+		<property name="EndingFreeCIDs" type="long" />
+		<property name="UnspPagesQTime" type="double" />
+		<property name="UnspPagesStart" type="long" />
+		<property name="UnspPagesEnd" type="long" />
+		<property name="LinkPrePushMsgs" type="double" />
+		<property name="LinkReadLinkMsgs" type="double" />
+		<property name="LinkLargeMsgs" type="double" />
+		<property name="ReadLinkCacheAll" type="double" />
+		<property name="ReadLinkCacheCtrl" type="double" />
+		<property name="ReadLinkCacheNone" type="double" />
+		<property name="ReplyCtrlCacheMsgs" type="double" />
+		<property name="ProcessHSamples" type="double" />
+		<property name="StartingTimerCells" type="long" />
+		<property name="EndingTimerCells" type="long" />
+		<property name="LockedPagesQtime" type="double" />
+		<property name="LockedPagesStart" type="double" />
+		<property name="LockedPagesEnd" type="double" />
+		<property name="IpuBusyTime1" type="double" />
+		<property name="IpuQtime1" type="double" />
+		<property name="IpuDispatches1" type="double" />
+		<property name="IpuBusyTime2" type="double" />
+		<property name="IpuQtime2" type="double" />
+		<property name="IpuDispatches2" type="double" />
+		<property name="IpuBusyTime3" type="double" />
+		<property name="IpuQtime3" type="double" />
+		<property name="IpuDispatches3" type="double" />
+		<property name="IpuBusyTime4" type="double" />
+		<property name="IpuQtime4" type="double" />
+		<property name="IpuDispatches4" type="double" />
+		<property name="IpuBusyTime5" type="double" />
+		<property name="IpuQtime5" type="double" />
+		<property name="IpuDispatches5" type="double" />
+		<property name="IpuBusyTime6" type="double" />
+		<property name="IpuQtime6" type="double" />
+		<property name="IpuDispatches6" type="double" />
+		<property name="IpuBusyTime7" type="double" />
+		<property name="IpuQtime7" type="double" />
+		<property name="IpuDispatches7" type="double" />
+		<property name="IpuBusyTime8" type="double" />
+		<property name="IpuQtime8" type="double" />
+		<property name="IpuDispatches8" type="double" />
+		<property name="IpuBusyTime9" type="double" />
+		<property name="IpuQtime9" type="double" />
+		<property name="IpuDispatches9" type="double" />
+		<property name="IpuBusyTime10" type="double" />
+		<property name="IpuQtime10" type="double" />
+		<property name="IpuDispatches10" type="double" />
+		<property name="IpuBusyTime11" type="double" />
+		<property name="IpuQtime11" type="double" />
+		<property name="IpuDispatches11" type="double" />
+		<property name="IpuBusyTime12" type="double" />
+		<property name="IpuQtime12" type="double" />
+		<property name="IpuDispatches12" type="double" />
+		<property name="IpuBusyTime13" type="double" />
+		<property name="IpuQtime13" type="double" />
+		<property name="IpuDispatches13" type="double" />
+		<property name="IpuBusyTime14" type="double" />
+		<property name="IpuQtime14" type="double" />
+		<property name="IpuDispatches14" type="double" />
+		<property name="IpuBusyTime15" type="double" />
+		<property name="IpuQtime15" type="double" />
+		<property name="IpuDispatches15" type="double" />
+		<property name="IpuBusyTime16" type="double" />
+		<property name="IpuQtime16" type="double" />
+		<property name="IpuDispatches16" type="double" />
+		<property name="ReadRequests1" type="double" />
+		<property name="WriteRequests1" type="double" />
+		<property name="ReadBytes1" type="double" />
+		<property name="WriteBytes1" type="double" />
+		<property name="ReadRequests2" type="double" />
+		<property name="WriteRequests2" type="double" />
+		<property name="ReadBytes2" type="double" />
+		<property name="WriteBytes2" type="double" />
+		<property name="ReadRequests3" type="double" />
+		<property name="WriteRequests3" type="double" />
+		<property name="ReadBytes3" type="double" />
+		<property name="WriteBytes3" type="double" />
+		<property name="ReadRequests4" type="double" />
+		<property name="WriteRequests4" type="double" />
+		<property name="ReadBytes4" type="double" />
+		<property name="WriteBytes4" type="double" />
+		<property name="ReadRequests5" type="double" />
+		<property name="WriteRequests5" type="double" />
+		<property name="ReadBytes5" type="double" />
+		<property name="WriteBytes5" type="double" />
+		<property name="ReadRequests6" type="double" />
+		<property name="WriteRequests6" type="double" />
+		<property name="ReadBytes6" type="double" />
+		<property name="WriteBytes6" type="double" />
+		<property name="ReadRequests7" type="double" />
+		<property name="WriteRequests7" type="double" />
+		<property name="ReadBytes7" type="double" />
+		<property name="WriteBytes7" type="double" />
+		<property name="ReadRequests8" type="double" />
+		<property name="WriteRequests8" type="double" />
+		<property name="ReadBytes8" type="double" />
+		<property name="WriteBytes8" type="double" />
+		<property name="ReadRequests9" type="double" />
+		<property name="WriteRequests9" type="double" />
+		<property name="ReadBytes9" type="double" />
+		<property name="WriteBytes9" type="double" />
+		<property name="ReadRequests10" type="double" />
+		<property name="WriteRequests10" type="double" />
+		<property name="ReadBytes10" type="double" />
+		<property name="WriteBytes10" type="double" />
+		<property name="ReadRequests11" type="double" />
+		<property name="WriteRequests11" type="double" />
+		<property name="ReadBytes11" type="double" />
+		<property name="WriteBytes11" type="double" />
+		<property name="ReadRequests12" type="double" />
+		<property name="WriteRequests12" type="double" />
+		<property name="ReadBytes12" type="double" />
+		<property name="WriteBytes12" type="double" />
+		<property name="ReadRequests13" type="double" />
+		<property name="WriteRequests13" type="double" />
+		<property name="ReadBytes13" type="double" />
+		<property name="WriteBytes13" type="double" />
+		<property name="ReadRequests14" type="double" />
+		<property name="WriteRequests14" type="double" />
+		<property name="ReadBytes14" type="double" />
+		<property name="WriteBytes14" type="double" />
+		<property name="ReadRequests15" type="double" />
+		<property name="WriteRequests15" type="double" />
+		<property name="ReadBytes15" type="double" />
+		<property name="WriteBytes15" type="double" />
+		<property name="ReadRequests16" type="double" />
+		<property name="WriteRequests16" type="double" />
+		<property name="ReadBytes16" type="double" />
+		<property name="WriteBytes16" type="double" />
+		<property name="CpuType" type="int" />
+		<property name="CpuSubtype" type="int" />
+		<property name="MemoryPages" type="int" />
+		<property name="Pcbs" type="int" />
+		<property name="PageSizeBytes" type="long" />
+		<property name="MemoryPages32" type="long" />
+		<property name="MemInitialLock" type="long" />
+		<property name="Ipus" type="int" />
+		<property name="Flags" type="string" length="2" />
+	</class>
+</hibernate-mapping>

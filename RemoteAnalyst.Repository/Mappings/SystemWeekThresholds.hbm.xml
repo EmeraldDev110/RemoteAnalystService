@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="SystemWeekThresholds" table="systemweekthresholds">
+		<composite-id>
+			<key-property name="SystemSerial" type="string" length="10" />
+			<key-property name="ThresholdTypeId" type="int" />
+		</composite-id>
+		<property name="CPUBusyMinor" type="double" />
+		<property name="CPUBusyMajor" type="double" />
+		<property name="CPUQueueLengthMinor" type="double" />
+		<property name="CPUQueueLengthMajor" type="double" />
+		<property name="IPUBusyMinor" type="double" />
+		<property name="IPUBusyMajor" type="double" />
+		<property name="IPUQueueLengthMinor" type="double" />
+		<property name="IPUQueueLengthMajor" type="double" />
+		<property name="DiskFullMinor" type="double" />
+		<property name="DiskFullMajor" type="double" />
+		<property name="DiskQueueLengthMinor" type="double" />
+		<property name="DiskQueueLengthMajor" type="double" />
+		<property name="DiskDP2Minor" type="double" />
+		<property name="DiskDP2Major" type="double" />
+		<property name="StorageMinor" type="double" />
+		<property name="StorageMajor" type="double" />
+	</class>
+</hibernate-mapping>

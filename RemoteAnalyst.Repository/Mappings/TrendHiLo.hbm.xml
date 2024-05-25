@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TrendHiLo" table="trendhilo">
+		<composite-id>
+			<key-property name="SystemSerialNum" column="SystemSerialNum" type ="string" length="50"/>
+			<key-property name="DataDate" column="DataDate" type ="datetime"/>
+			<key-property name="CpuNum" column="CpuNum" type ="string" length="4"/>
+			<key-property name ="DataHour" column="DataHour" type="int"/>
+		</composite-id>
+		<property name="HiVal" type="float" />
+		<property name="HiIntv" type="datetime" />
+		<property name="LoVal" type="float" />
+		<property name="LoIntv" type="datetime" />
+	</class>
+</hibernate-mapping>

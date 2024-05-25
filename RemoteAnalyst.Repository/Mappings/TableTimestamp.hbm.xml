@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TableTimestamp" table="tabletimestamp">
+		<composite-id>
+			<key-property name="TableName" column="TableName" type="string" length="50" />
+			<key-property name="Start" column="Start" type="datetime" />
+			<key-property name="End" column="End" type="datetime" />
+		</composite-id>
+		<property name="Status" type="int" />
+		<property name="ArchiveID" type="string" />
+		<property name="CreationDate" type="datetime" />
+		<property name="FileName" type="string" length="100" />
+	</class>
+	<class name="TempTableTimestamp" table="temptabletimestamp">
+		<composite-id>
+			<key-property name="TableName" column="TableName" type="string" length="50" />
+			<key-property name="Start" column="Start" type="datetime" />
+			<key-property name="End" column="End" type="datetime" />
+		</composite-id>
+		<property name="FileName" type="string" length="100" />
+	</class>
+</hibernate-mapping>

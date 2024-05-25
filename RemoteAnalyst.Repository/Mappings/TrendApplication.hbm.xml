@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TrendApplicationInterval" table="trendapplicationinterval">
+		<composite-id>
+			<key-property name="Interval" column="`Interval`" type ="datetime"/>
+			<key-property name ="ApplicationName" column="ApplicationName" type="string" length="45" />
+		</composite-id>
+		<property name="CpuBusy" type="double" />
+		<property name="DiskIO" type="double" />
+	</class>
+	
+	<class name="TrendApplicationHourly" table="trendapplicationhourly">
+		<composite-id>
+			<key-property name="Hour" column="Hour" type ="datetime"/>
+			<key-property name ="ApplicationName" column="ApplicationName" type="string" length="45" />
+		</composite-id>
+		<property name="PeakCpuBusy" type="double" />
+		<property name="AverageCpuBusy" type="double" />
+		<property name="PeakDiskIO" type="double" />
+		<property name="AverageDiskIO" type="double" />
+	</class>
+</hibernate-mapping>

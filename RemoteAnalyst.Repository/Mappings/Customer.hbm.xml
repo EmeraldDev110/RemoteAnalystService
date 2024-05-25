@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="QuickNetworkMonitor"
+                   namespace="QuickNetworkMonitor.Models">
+
+  <class name="Customer" table="QNM_Customer">
+    <id name="Id" column="CustomerID">
+      <generator class="native" />
+    </id>
+    <property name="FirstName" column="FirstName" type="String" not-null="true"/>
+    <property name="LastName" column="LastName" type="String" not-null="true"/>
+  </class>
+  <class name="CustomerLog">
+    <id name="Id" column="ID">
+      <generator class="native" />
+    </id>
+    <property name="CustomerId" column="CustomerID"/>
+    <property name="TimeStamp" column="TimeStamp"/>
+    <property name="Message" column="Message"/>
+    <many-to-one name="Customer"
+               column="CustomerID"
+               insert="false"
+               update="false"
+               not-null="true"/>
+  </class>
+</hibernate-mapping>

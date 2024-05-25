@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="QuickNetworkMonitor"
+                   namespace="QuickNetworkMonitor.Models">
+
+  <class name="QNMSLSASummary" table="QNM_SLSASummary">
+    <id name="Id" column="Id">
+      <generator class="native" />
+    </id>
+    <property name="PIFName" column="[PIF Name]" type="string" length="50" not-null="true"/>
+    <property name="LineSpeed" column="[Line Speed]" type="float" not-null="true"/>
+    <property name="AutoNegotiation" column="[Auto Negotiation]" type="float" not-null="true"/>
+    <property name="DuplexMode" column="[Duplex Mode]" type="float" not-null="true"/>
+  </class>
+</hibernate-mapping>

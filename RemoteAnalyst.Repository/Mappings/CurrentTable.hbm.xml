@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="CurrentTable" table="currenttables">
+		<id name="TableName" column="TableName" type="string" length="50"/>
+		<property name="EntityID" type="int"/>
+		<property name="SystemSerial" type="string" length="10"/>
+		<property name="Interval" column="`Interval`" type="int"/>
+		<property name="DataDate" type="datetime" />
+		<property name="MeasureVersion" type="string" length="3" />
+		<set name="TableTimestamps" inverse="true">
+			<key column="TableName"/>
+			<one-to-many class="TableTimestamp"/>
+		</set>
+	</class>
+	<class name="TempCurrentTable" table="tempcurrenttables">
+		<id name="TableName" column="TableName" type="string" length="50"/>
+		<property name="EntityID" type="int"/>
+		<property name="SystemSerial" type="string" length="10"/>
+		<property name="Interval" column="`Interval`" type="int"/>
+		<property name="DataDate" type="datetime" />
+		<property name="MeasureVersion" type="string" length="3" />
+		<set name="TempTableTimestamps" inverse="true">
+			<key column="TableName"/>
+			<one-to-many class="TempTableTimestamp"/>
+		</set>
+	</class>
+</hibernate-mapping>

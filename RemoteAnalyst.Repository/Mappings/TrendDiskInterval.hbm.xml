@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name ="TrendDiskInterval" table="TrendDiskInterval">
+		<id name="Interval" column="Interval"/>
+		<property name="TotalIO"/>
+		<property name="BusiestDisk"/>
+		<property name="IORate"/>
+		<property name="AverageQueueLength"/>
+		<property name="QueuedDisk"/>
+		<property name="QueueLength"/>
+		<property name="AverageCacheHitRate"/>
+		<property name="TrashingDisk"/>
+		<property name="CacheHitRate"/>
+		<property name="AverageDp2Busy"/>
+		<property name="BusiestDp2"/>
+		<property name="Dp2Busy"/>
+		<property name="AverageRequestART"/>
+		<property name="HighestARTDisk"/>
+		<property name="ART"/>
+		<property name="AverageDeviceQBusy"/>
+		<property name="BusiestQDevice"/>
+		<property name="DeviceQBusy"/>
+	</class>
+	<class name ="TrendDiskHourly" table="TrendDiskHourly">
+		<id name="Hour" column="Hour"/>
+		<property name="AverageTotalIO"/>
+		<property name="PeakTotalIO"/>
+		<property name="DiskAtHiPeakIORate"/>
+		<property name="IORateAtHiPeak"/>
+		<property name="DiskAtHiAvgIORate"/>
+		<property name="IORateAtHiAvg"/>
+		<property name="DiskAtHiAvgQueueLength"/>
+		<property name="QueueLengthAtHiAvg"/>
+		<property name="DiskAtHiPeakQueueLength"/>
+		<property name="QueueLengthAtHiPeak"/>
+		<property name="DiskAtHiAvgCacheHitRate"/>
+		<property name="CacheHitRateAtHiAvg"/>
+		<property name="DiskAtHiPeakCacheHitRate"/>
+		<property name="CacheHitRateAtHiPeak"/>
+		<property name="DiskAtHiAvgDP2Busy"/>
+		<property name="DP2BusyAtHiAvg"/>
+		<property name="DiskAtHiPeakDP2Busy"/>
+		<property name="DP2BusyAtHiPeak"/>
+		<property name="DiskAtHiAvgART"/>
+		<property name="DiskAtHiPeakART"/>
+		<property name="ARTAtHiAvg"/>
+		<property name="ARTAtHiPeak"/>
+		<property name="DiskAtHiAvgDeviceQBusy"/>
+		<property name="DiskAtHiPeakDeviceQBusy"/>
+		<property name="DeviceQBusyAtHiAvg"/>
+		<property name="DeviceQBusyAtHiPeak"/>
+	</class>
+</hibernate-mapping>

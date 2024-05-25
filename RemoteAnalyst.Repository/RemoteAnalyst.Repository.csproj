@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3388DBE-300F-486A-807B-01B8AEEBF82F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RemoteAnalyst.Repository</RootNamespace>
+    <AssemblyName>RemoteAnalyst.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>RARepositoryRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RDSMove|AnyCPU'">
+    <OutputPath>bin\RDSMove\</OutputPath>
+    <DefineConstants>TRACE;RDSMove</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RDSMove|x64'">
+    <OutputPath>bin\x64\RDSMove\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RDSMove|x86'">
+    <OutputPath>bin\x86\RDSMove\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EVALUATION_COPY|AnyCPU'">
+    <OutputPath>bin\EVALUATION_COPY\</OutputPath>
+    <DefineConstants>TRACE;EVALUATION_COPY</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EVALUATION_COPY|x64'">
+    <OutputPath>bin\x64\EVALUATION_COPY\</OutputPath>
+    <DefineConstants>TRACE;EVALUATION_COPY</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'EVALUATION_COPY|x86'">
+    <OutputPath>bin\x86\EVALUATION_COPY\</OutputPath>
+    <DefineConstants>TRACE;EVALUATION_COPY</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.2.2.5\lib\net471\MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.5.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.5.2\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Driver.MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=3909610c479fec88, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.Driver.MySqlConnector.2.0.5\lib\net461\NHibernate.Driver.MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.XFactories, Version=5.1.0.0, Culture=neutral, PublicKeyToken=bd8a1b36cdb64583, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.XFactories.5.1.0\lib\net461\NHibernate.XFactories.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Concrete\Model\ConsolidatedAlerts.cs" />
+    <Compile Include="Concrete\Model\TableTimestampQueryParameter.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\ChartEntities.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\ChartGroupDetail.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\DailyDisk.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\DailyProcessDatas.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\Database.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\DataTables.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\DeliverySchedules.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\DetailDiskForForecast.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\DetailProcessForForecast.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\DetailTmfForForecast.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\DiskInfo.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\Exceptions.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\MeasureVersions.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\MonthlyAppUnrated.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\MonthlyDisk.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\MonthlySysUnrated.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\OSSJRNL.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\Pathway.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\ProcessEntityTable.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\PvCollects.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\QNM.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\RecepientList.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\ReportEntities.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\ReportGroupDetail.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\StorageReport.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\TrendCPUNormalized.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\UWSArchive.cs" />
+    <Compile Include="Concrete\RemoteAnalystdbSPAM\UWSLoadingStatus.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\Batch.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\CustomerOrders.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\DataDictionary.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\DBAdministrator.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\QueryHelper.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\Holidays.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\InHouseConfig.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\LoadingInfo.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\LoadingInfoDisk.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\LoadingStatus.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\LoadingStatusDetail.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\LoadingStatusDetailDISCOPEN.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\MonitorEC2.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\MonitorRDS.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\NonStopInfo.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\NotificationPreferences.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\NullCheck.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\PathwayDirectories.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\ProcessWatchAlerts.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\ProfileDetail.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\QNMDirectories.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\ReportActivity.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\ReportDownloadLogs.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\ReportDownloads.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\ReportQueues.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\ReportQueuesAWS.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\Sample.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\SampleInfo.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\Schedules.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\ScheduleStorageDetail.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\SpecialDays.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\StorageAnalysis.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\SystemSerialConversions.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\SystemWeek.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\TMonComplete.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\TMonDelay.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\TMonFileNames.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\TMonSchedule.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\TMonTomorrow.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\Transmon.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\TransmonLogs.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\Triggers.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\UploadFileNames.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\UploadMessages.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\Uploads.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\UploadStatus.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\UWSDirectories.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\UWSFileCounts.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\UWSLoadInfos.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\VisaTrendLoader.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\VProcVersions.cs" />
+    <Compile Include="Concrete\RemoteAnalystdb\XVDailyEntityCleanerRepository.cs" />
+    <Compile Include="Domain\ISystemRepository.cs" />
+    <Compile Include="Domain\ICusAnalystRepository.cs" />
+    <Compile Include="Helpers\CollectionHelper.cs" />
+    <Compile Include="Helpers\DatabaseNameHelper.cs" />
+    <Compile Include="Interceptors\DynamicTableInterceptor.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\CurrentTables.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DetailProcessForForecast.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ForecastTmf.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ForecastProcess.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ForecastStorage.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ForecastDisk.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ForecastIPU.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\Forecast.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\CurrentTable.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DailyAppUnrated.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DailyCPUData.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DiskBrowser.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DISCEntity.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\HiLo.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TempCurrentTable.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TempTableTimestamp.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendWalkthrough.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendTmfHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendTmfInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DailyDisk.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DailySysUnrated.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\PvCpuOnce.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendPathwayHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendApplicationHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendExpandHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendHiLo.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendExpandInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendCpuHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendCpuInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendDiskHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendDiskInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendIpuHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendIpuInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendProcessHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendTCPSubnetHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendTCPProcessHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendTCPSubnetInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendTCPProcessInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendProgramHourly.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendApplicationInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendProcessInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TrendProgramInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\SystemInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ProcessInterval.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ProcessAlert.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DiskFileAlert.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DiskAlert.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\CpuAlert.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\AlertSummary.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\DailiesTopProcess.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\Entity.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\FileEntity.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\CPUEntity.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ProcessEntity.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\BatchSequenceAlertRecipient.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\BatchSequenceAlertProgram.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\BatchSequenceTrend.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\BatchSequenceProfile.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\TableTimestamp.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\UserAllocation.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\VProcVersions.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\ZmsBladeDataDictionary.cs" />
+    <Compile Include="Models\RemoteAnalystdb\ProfileDetail.cs" />
+    <Compile Include="Models\RemoteAnalystdb\ReportActivity.cs" />
+    <Compile Include="Models\RemoteAnalystdb\ReportDownloads.cs" />
+    <Compile Include="Models\RemoteAnalystdb\ReportQueues.cs" />
+    <Compile Include="Models\RemoteAnalystdb\ReportQueuesAWS.cs" />
+    <Compile Include="Models\RemoteAnalystdb\SystemWeekThresholds.cs" />
+    <Compile Include="Models\RemoteAnalystdb\DatabaseMapping.cs" />
+    <Compile Include="Models\RemoteAnalystdb\RAInfo.cs" />
+    <Compile Include="Models\RemoteAnalystdb\AwsMapper.cs" />
+    <Compile Include="Models\RemoteAnalystdbSPAM\AlertRecipient.cs" />
+    <Compile Include="Models\RemoteAnalystdb\Company.cs" />
+    <Compile Include="Models\RemoteAnalystdb\System.cs" />
+    <Compile Include="Models\RemoteAnalystdb\TransactionProfiles.cs" />
+    <Compile Include="Models\RemoteAnalystdb\Triggers.cs" />
+    <Compile Include="MySQLConcrete\RemoteAnalystSPAM\Entities.cs" />
+    <Compile Include="MySQLConcrete\RemoteAnalystSPAM\FileEntity.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\CPUEntityRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\CurrentTablesRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DataTablesRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DiskTrendTableRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\CPUTrendTableRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\ForecastRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\CPUEntityTable.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DailyCPUDataRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DailyAppUnratedRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DailySysUnratedRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\HiLoRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\NullCheckRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\ProcessEntityRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\TempCurrentTableRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DiskBrowserRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DISCEntityTable.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\CurrentTableRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\TempTableTimestampRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\TableTimestampRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\TrendCleaner.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\SystemIntervalRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\ProcessIntervalRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\ProcessAlertRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DiskFileAlertRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DiskAlertRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\CpuAlertRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\AlertSummaryRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\DailiesTopProcessRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\EntityRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\BatchRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\ProfileDetailRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\ReportActivityRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\ReportDownloadsRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\ReportQueuesAWSRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\ReportQueuesRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\SystemWeekThresholdsRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\RAInfoRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\DatabaseMappingRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\AwsMapperRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdbSPAM\AlertRecipientRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\SystemRepository.cs" />
+    <Compile Include="Repositories\NHibernateHelper.cs" />
+    <Compile Include="Infrastructure\Constants.cs" />
+    <Compile Include="Infrastructure\Helper.cs" />
+    <Compile Include="Infrastructure\UWSDirectoryInfo.cs" />
+    <Compile Include="Models\RemoteAnalystdb\CusAnalyst.cs" />
+    <Compile Include="MySQLConcrete\Helper.cs" />
+    <Compile Include="MySQLConcrete\RemoteAnalystdb\TransactionProfileEmail.cs" />
+    <Compile Include="MySQLConcrete\RemoteAnalystdb\TransactionProfiles.cs" />
+    <Compile Include="MySQLConcrete\RemoteAnalystSPAM\CurrentTables.cs" />
+    <Compile Include="MySQLConcrete\RemoteAnalystSPAM\TableTimestamps.cs" />
+    <Compile Include="MySQLConcrete\RemoteAnalystSPAM\TransactionProfileTrends.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\CusAnalystRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\TransactionProfilesRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\TriggersRepository.cs" />
+    <Compile Include="Repositories\RemoteAnalystdb\VProcVersionsRepository.cs" />
+    <Compile Include="Resources\Decrypt.cs" />
+    <Compile Include="Resources\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hibernate.cfg\nhibernate.cfg.xml" />
+    <EmbeddedResource Include="Mappings\CusAnalyst.hbm.xml" />
+    <EmbeddedResource Include="Mappings\System.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Company.hbm.xml" />
+    <EmbeddedResource Include="Mappings\AlertRecipient.hbm.xml" />
+    <EmbeddedResource Include="Mappings\AwsMapper.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DatabaseMapping.hbm.xml" />
+    <EmbeddedResource Include="Mappings\RAInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\ZmsBladeDataDictionary.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BatchSequenceProfile.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BatchSequenceAlertProgram.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BatchSequenceAlertRecipient.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BatchSequenceTrend.hbm.xml" />
+    <EmbeddedResource Include="Mappings\ProcessEntity.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TableTimestamp.hbm.xml" />
+    <EmbeddedResource Include="Mappings\FileEntity.hbm.xml" />
+    <EmbeddedResource Include="Mappings\CPUEntity.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Entity.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DailiesTopProcess.hbm.xml" />
+    <EmbeddedResource Include="Mappings\AlertSummary.hbm.xml" />
+    <EmbeddedResource Include="Mappings\CpuAlert.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DiskAlert.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DiskFileAlert.hbm.xml" />
+    <EmbeddedResource Include="Mappings\ProcessAlert.hbm.xml" />
+    <EmbeddedResource Include="Mappings\ProcessInterval.hbm.xml" />
+    <EmbeddedResource Include="Mappings\SystemInterval.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendProgram.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendDisk.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendCpuIpu.hbm.xml" />
+    <EmbeddedResource Include="Mappings\CurrentTable.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DailyDisk.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DailySysUnrated.hbm.xml" />
+    <EmbeddedResource Include="Mappings\PvCpuOnce.hbm.xml" />
+    <EmbeddedResource Include="Mappings\UserAllocation.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendApplication.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendExpand.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendHiLo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendPathway.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendProcess.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendTCPProcess.xml" />
+    <EmbeddedResource Include="Mappings\TrendTCPSubnet.xml" />
+    <EmbeddedResource Include="Mappings\TrendTmf.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TrendWalkthrough.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DISCEntity.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DiskBrowser.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DailyAppUnrated.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DailyCPUData.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Forecast.hbm.xml" />
+    <EmbeddedResource Include="Mappings\SystemWeekThresholds.hbm.xml" />
+    <Content Include="Mappings\Analyst.hbm.xml" />
+    <Content Include="Mappings\CurrentTables.hbm.xml" />
+    <Content Include="Mappings\Customer.hbm.xml" />
+    <Content Include="Mappings\Order.hbm.xml" />
+    <Content Include="Mappings\Process.hbm.xml" />
+    <Content Include="Mappings\ProfileDetail.hbm.xml" />
+    <Content Include="Mappings\QNMAbout.hbm.xml" />
+    <Content Include="Mappings\QNMCLIMCPUDetail.hbm.xml" />
+    <Content Include="Mappings\QNMCLIMDetail.hbm.xml" />
+    <Content Include="Mappings\QNMCLIMDiskDetail.hbm.xml" />
+    <Content Include="Mappings\QNMExpandPathDetail.hbm.xml" />
+    <Content Include="Mappings\QNMProbeRoundTripDetail.hbm.xml" />
+    <Content Include="Mappings\QNMSLSADetail.hbm.xml" />
+    <Content Include="Mappings\QNMSLSASummary.hbm.xml" />
+    <Content Include="Mappings\QNMTCPPacketsDetail.hbm.xml" />
+    <Content Include="Mappings\QNMTCPProcessDetail.hbm.xml" />
+    <Content Include="Mappings\QNMTCPSubnetDetail.hbm.xml" />
+    <Content Include="Mappings\QNMTCPv6Detail.hbm.xml" />
+    <Content Include="Mappings\QNMTCPv6SubnetDetail.hbm.xml" />
+    <Content Include="Mappings\ReportActivity.hbm.xml" />
+    <Content Include="Mappings\ReportDownloadLog.hbm.xml" />
+    <Content Include="Mappings\ReportDownloads.hbm.xml" />
+    <Content Include="Mappings\ReportQueues.hbm.xml" />
+    <Content Include="Mappings\ReportQueuesAWS.hbm.xml" />
+    <Content Include="Mappings\Trace.hbm.xml" />
+    <Content Include="Mappings\TrendCpuHourly.hbm.xml" />
+    <Content Include="Mappings\TrendDiskInterval.hbm.xml" />
+    <Content Include="Mappings\TrendProgramInterval.hbm.xml" />
+    <Content Include="Resources\QNM.sql" />
+    <Content Include="Resources\NonStopSPAM.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

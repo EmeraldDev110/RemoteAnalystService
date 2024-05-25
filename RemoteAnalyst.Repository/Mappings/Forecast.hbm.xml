@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="Forecast" table="forecasts">
+		<composite-id>
+			<key-property name="FromTimestamp" type="datetime" />
+			<key-property name="CpuNumber" type="int" />
+		</composite-id>
+		<property name="CPUBusy" type="double" />
+		<property name="MemoryUsed" type="long" />
+		<property name="CPUQueue" type="double" />
+		<property name="StdDevCPUBusy" type="double" />
+		<property name="StdDevMemoryUsed" type="double" />
+		<property name="StdDevCPUQueue" type="double" />
+	</class>
+	
+	<class name="ForecastIPU" table="forecastipus">
+		<composite-id>
+			<key-property name="FromTimestamp" type="datetime" />
+			<key-property name="CpuNumber" type="int" />
+			<key-property name="IpuNumber" type="int" />
+		</composite-id>
+		<property name="IpuBusy" type="double" />
+		<property name="IpuQueue" type="double" />
+		<property name="StdDevIpuBusy" type="double" />
+		<property name="StdDevIpuQueue" type="double" />
+	</class>
+	
+	<class name="ForecastDisk" table="forecastdisks">
+		<composite-id>
+			<key-property name="FromTimestamp" type="datetime" />
+			<key-property name="DeviceName" type="string" length="45" />
+		</composite-id>
+		<property name="QueueLength" type="double" />
+		<property name="StdDevQueueLength" type="double" />
+		<property name="DP2Busy" type="double" />
+		<property name="StdDevDP2Busy" type="double" />
+	</class>
+	
+	<class name="ForecastStorage" table="forecaststorages">
+		<composite-id>
+			<key-property name="FromTimestamp" type="datetime" />
+			<key-property name="DeviceName" type="string" length="45" />
+		</composite-id>
+		<property name="UsedPercent" type="double" />
+		<property name="StdDevUsedPercent" type="double" />
+	</class>
+	
+	<class name="ForecastProcess" table="forecastprocesses">
+		<composite-id>
+			<key-property name="FromTimestamp" type="datetime" />
+			<key-property name="ProcessName" type="string" length="10" />
+			<key-property name="CpuNumber" type="string" length="2" />
+			<key-property name="Pin" type="int" />
+			<key-property name="Volume" type="string" length="8" />
+			<key-property name="SubVol" type="string" length="8" />
+			<key-property name="FileName" type="string" length="8" />
+		</composite-id>
+		<property name="ProcessBusy" type="double" />
+		<property name="StdDevProcessBusy" type="double" />
+		<property name="RecvQueueLength" type="double" />
+		<property name="StdDevRecvQueueLength" type="double" />
+	</class>
+	
+	<class name="ForecastTmf" table="forecasttmfs">
+		<composite-id>
+			<key-property name="FromTimestamp" type="datetime" />
+			<key-property name="ProcessName" type="string" length="10" />
+			<key-property name="CpuNumber" type="string" length="2" />
+			<key-property name="Pin" type="int" />
+			<key-property name="Volume" type="string" length="8" />
+			<key-property name="SubVol" type="string" length="8" />
+			<key-property name="FileName" type="string" length="8" />
+		</composite-id>
+		<property name="AbortPercent" type="double" />
+		<property name="StdDevAbortPercent" type="double" />
+	</class>
+	
+</hibernate-mapping>

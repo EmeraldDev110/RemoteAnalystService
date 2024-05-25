@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="Company" table="company_tbl">
+		<id name="CompanyID" column="CompanyID">
+			<generator class="native" />
+		</id>
+		<property name="CompanyName" column="CompanyName" type="string" length="100" not-null="true"/>
+		<property name="Addr1" column="addr1" type="string" length="100"/>
+		<property name="Addr2" column="addr2" type="string" length="100"/>
+		<property name="City" column="city" type="string" length="100"/>
+		<property name="State" column="state" type="string" length="100"/>
+		<property name="ZipCode" column="zipcode" type="string" length="100"/>
+		<property name="Country" column="country" type="string" length="100"/>
+		<property name="Phone" column="phone" type="string" length="100"/>
+		<property name="Contact"  column="contact" type="string" length="100"/>
+		<property name="Status"  column="status" type="string" length="100"/>
+		<property name="Email" column="email" type="string" length="100" />
+		<property name="PrimarySysNum" column="PrimarySysNum" type="string" length="100"/>
+		<property name="SupportLink" column="SupportLink" type="string" length="100"/>
+		<property name="LogoPath" column="LogoPath"  type="string" length="100"/>
+		<property name="ImagePath"  column="ImagePath" type="string" length="100"/>
+		<property name="IsVendor"  column="is_vendor" type="boolean" not-null="false"/>
+
+		<set name="CusAnalysts" inverse="true">
+			<key column="CompanyID"/>
+			<one-to-many class="CusAnalyst"/>
+		</set>
+		<set name="Systems" inverse="true">
+			<key column="CompanyID"/>
+			<one-to-many class="System"/>
+		</set>
+	</class>
+</hibernate-mapping>

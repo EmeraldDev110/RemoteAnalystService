@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="ProfileDetail" table="ProfileDetail">
+		<id name="RecordID" column="RecordID">
+			<generator class="native" />
+		</id>
+		<property name="ProfileID" column="ProfileID"/>
+		<property name="ProfileEntity" column="ProfileEntity"/>
+	</class>
+</hibernate-mapping>

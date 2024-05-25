@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="CusAnalyst" table="cusanalyst">
+		<id name="Id" column="customerID">
+			<generator class="native" />
+		</id>
+		<property name="CompanyID" column="companyID"/>
+		<property name="Fname" column="fname" />
+		<property name="Lname" column="lname" />
+		<property name="Login" column="login" />
+		<property name="Password" column="password" />
+		<property name="Phone" column="Phone" />
+		<property name="CellPhone" column="CellPhone" />
+		<property name="Email" column="email" />
+		<property name="DateRegistered" column="dateRegistered" />
+		<property name="DateExpire" column="dateExpire" />
+		<property name="Type" column="type" />
+		<property name="CollectorVersion" column="collectorVersion" />
+		<property name="DateCollectorDownload" column="dateCollectorDownload" />
+		<property name="Addr1" column="addr1" />
+		<property name="Addr2" column="addr2" />
+		<property name="City" column="city" />
+		<property name="State" column="state" />
+		<property name="Country" column="country" />
+		<property name="Zipcode" column="zipcode" />
+		<property name="CmpName" column="cmp_name" />
+		<property name="CmpPhone" column="cmp_phone" />
+		<property name="CmpAddr1" column="cmp_addr1" />
+		<property name="CmpAddr2" column="cmp_addr2" />
+		<property name="CmpCity" column="cmp_city" />
+		<property name="CmpState" column="cmp_state" />
+		<property name="CmpZipcode" column="cmp_zipcode" />
+		<property name="CmpCountry" column="cmp_country" />
+		<property name="CmpSystem" column="cmp_system" />
+		<property name="CmpBilling" column="cmp_billing" />
+		<property name="Visited" column="visited" />
+		<property name="DaysUWS" column="days_uws" />
+		<property name="DaysSample" column="days_sample" />
+		<property name="NumLogins" column="num_logins" />
+		<property name="LastLogin" column="last_login" />
+		<property name="Status" column="status" />
+		<property name="Expiredate" column="expiredate" />
+		<property name="LastNewRALogin" column="last_newra_login" />
+		<property name="ChartFrom" column="ChartFrom" />
+		<property name="ChartTo" column="ChartTo" />
+		<property name="IsMultiServer" column="IsMultiServer" />
+		<property name="MultiServerDisplayFormat" column="MultiServerDisplayFormat" />
+		<property name="LogonAttemptCount" column="LogonAttemptCount" />
+		<property name="LogonLockTime" column="LogonLockTime" />
+	</class>
+</hibernate-mapping>

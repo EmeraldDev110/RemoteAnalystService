@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+    <class name="ReportQueues" table="ReportQueues">
+        <id name="QueueID" column="QueueID">
+            <generator class="native" />
+        </id>
+        <property name="FileName" column="FileName"/>
+        <property name="TypeID" column="TypeID"/>
+        <property name="Loading" column="Loading"/>
+        <property name="OrderDate" column="OrderDate"/>
+    </class>
+</hibernate-mapping>

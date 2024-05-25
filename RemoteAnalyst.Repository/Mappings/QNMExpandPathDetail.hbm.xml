@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="QuickNetworkMonitor"
+                   namespace="QuickNetworkMonitor.Models">
+
+  <class name="QNMExpandPathDetail" table="QNM_ExpandPathDetail">
+    <id name="Id" column="Id">
+      <generator class="native" />
+    </id>
+    <property name="DeviceName" column="[Device Name]" type="string" length="50" not-null="true"/>
+    <property name="ReceivedPackets" column="[Received Packets]" type="float" not-null="true"/>
+    <property name="SentPackets" column="[Sent Packets]" type="float" not-null="true"/>
+    <property name="SentForwards" column="[Sent Forwards]" type="float" not-null="true"/>
+    <property name="ReceivedForwards" column="[Received Forwards]" type="float" not-null="true"/>
+    <property name="L4PacketsDiscarded" column="[L4 Packets Discarded]" type="float" not-null="true"/>
+    <property name="AvgPacketsByFrameSent" column="[Avg.Packets/Frame Sent]" type="float" not-null="true"/>
+    <property name="AvgBytesByFrameSent" column="[Avg.Bytes/Frame Sent]" type="float" not-null="true"/>
+    <property name="AvgPacketsByFrameReceived" column="[Avg.Packets/Frame Received]" type="float" not-null="true"/>
+    <property name="AvgBytesByFrameReceived" column="[Avg.Bytes/Frame Received]" type="float" not-null="true"/>
+    <property name="TransmitTimeouts" column="[Transmit Timeouts]" type="float" not-null="true"/>
+    <property name="RetransmitTimeouts" column="[Retransmit Timeouts]" type="float" not-null="true"/>
+    <property name="RetransmitPackets" column="[Retransmit Packets]" type="float" not-null="true"/>
+    <property name="OOSUsage" column="[OOS Usage]" type="float" not-null="true"/>
+    <property name="OOSTimeouts" column="[OOS Timeouts]" type="float" not-null="true"/>
+    <property name="L4SentAck" column="[L4 Sent Ack]" type="float" not-null="true"/>
+    <property name="L4SentNOTAck" column="[L4 Sent NOT Ack]" type="float" not-null="true"/>
+    <property name="L4ReceivedAck" column="[L4 Received Ack]" type="float" not-null="true"/>
+    <property name="L4ReceivedNOTAck" column="[L4 Received NOT Ack]" type="float" not-null="true"/>
+    <property name="L3MiscBadPackets" column="[L3 Misc Bad Packets]" type="float" not-null="true"/>
+    
+    <property name="Reset" column="Reset" type="char" not-null="true"/>
+    <property name="DateTime" column="[Date Time]" type="DateTime" not-null="true"/>
+  </class>
+</hibernate-mapping>

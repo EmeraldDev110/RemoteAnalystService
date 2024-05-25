@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="ReportActivity" table="ReportActivity">
+		<id name="ReportActivityID" column="ReportActivityID">
+			<generator class="native" />
+		</id>
+		<property name="Date" column="Date"/>
+		<property name="Email" column="Email"/>
+		<property name="SystemSerial" column="SystemSerial"/>
+		<property name="ReportType" column="ReportType"/>
+		<property name="ReportName" column="ReportName"/>
+		<property name="PeriodFrom" column="PeriodFrom"/>
+		<property name="PeriodTo" column="PeriodTo"/>
+	</class>
+</hibernate-mapping>

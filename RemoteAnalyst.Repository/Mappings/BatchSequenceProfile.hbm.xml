@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="BatchSequenceProfile" table="batchsequenceprofile">
+		<id name="BatchSequenceProfileId" column="BatchSequenceProfileId">
+			<generator class="native" />
+		</id>
+		<property name="Name" type="string" length="100" />
+		<property name="StartWindowStart" type="time" />
+		<property name="StartWindowEnd" type="time" />
+		<property name="StartWindowDoW" type="string" length="7" />
+		<property name="ExpectedFinishBy" type="time" />
+		<property name="AlertIfDoesNotStartOnTime" type="boolean" />
+		<property name="AlertIfOrderNotFollowed" type="boolean" />
+		<property name="AlertIfDoesNotFinishOnTime" type="boolean" />
+		<set name="AlertPrograms" inverse="true">
+			<key column="BatchSequenceProfileId"/>
+			<one-to-many class="BatchSequenceAlertProgram"/>
+		</set>
+		<set name="AlertRecipients" inverse="true">
+			<key column="BatchSequenceProfileId"/>
+			<one-to-many class="BatchSequenceAlertRecipient"/>
+		</set>
+	</class>
+</hibernate-mapping>

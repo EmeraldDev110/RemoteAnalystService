@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="TrendCpuHourly" table="TrendCpuHourly">
+		<composite-id>
+			<key-property name ="Hour" column="Hour" type="datetime"/>
+			<key-property name="CpuNumber" column="CpuNumber" type ="string"/>
+		</composite-id>
+		<property name="PeakCpuBusy"/>
+		<property name="AverageCpuBusy"/>
+		<property name="PeakQueueLength"/>
+		<property name="AverageQueueLength"/>
+		<property name="PeakMemoryUsed"/>
+		<property name="AverageMemoryUsed"/>
+		<property name="PeakDp2Busy"/>
+		<property name="AverageDp2Busy"/>
+		<property name="PeakSwapRate"/>
+		<property name="AverageSwapRate"/>
+		<property name="PeakDispatchRate"/>
+		<property name="AverageDispatchRate"/>
+	</class>
+	<class name ="TrendCpuInterval" table="TrendCpuInterval">
+		<composite-id>
+			<key-property name ="Interval" column="Interval" type="datetime"/>
+			<key-property name="CpuNumber" column="CpuNumber" type ="string"/>
+		</composite-id>
+		<property name="CpuBusy"/>
+		<property name="QueueLength"/>
+		<property name="MemoryUsed"/>
+		<property name="Dp2Busy"/>
+		<property name="SwapRate"/>
+		<property name="DispatchRate"/>
+		<property name="PageSizeBytes"/>
+		<property name="MemoryPages32"/>
+		<property name="Ipus"/>
+	</class>
+	<class name ="TrendIpuInterval" table="TrendIpuInterval">
+		<composite-id>
+			<key-property name ="Interval" column="Interval" type="datetime"/>
+			<key-property name="CpuNumber" column="CpuNumber" type ="string"/>
+			<key-property name="IpuNumber" column="IpuNumber" type ="string"/>
+		</composite-id>
+		<property name="IpuBusy"/>
+		<property name="QueueLength"/>
+	</class>
+	<class name ="TrendIpuHourly" table="TrendIpuHourly">
+		<composite-id>
+			<key-property name ="Hour" column="Hour" type="datetime"/>
+			<key-property name="CpuNumber" column="CpuNumber" type ="string"/>
+			<key-property name="IpuNumber" column="IpuNumber" type ="string"/>
+		</composite-id>
+		<property name="PeakIpuBusy"/>
+		<property name="AverageIpuBusy"/>
+		<property name="PeakQueueLength"/>
+		<property name="AverageQueueLength"/>
+	</class>
+</hibernate-mapping>

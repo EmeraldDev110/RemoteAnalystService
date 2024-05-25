@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="RemoteAnalyst.Repository"
+                   namespace="RemoteAnalyst.Repository.Models">
+
+	<class name="BatchSequenceTrend" table="batchsequencetrend">
+		<composite-id>
+			<key-property name="BatchSequenceProfileId" column="BatchSequenceProfileId" type="int" />
+			<key-property name="ProgramFile" type="string" length="40" />
+			<key-property name="DataDate" type="datetime" />
+		</composite-id>
+		<property name="StartTime" type="datetime"/>
+		<property name="EndTime" type="datetime"/>
+		<property name="Duration" type="int"/>
+	</class>
+</hibernate-mapping>

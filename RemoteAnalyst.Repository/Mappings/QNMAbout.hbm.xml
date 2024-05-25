@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="QuickNetworkMonitor"
+                   namespace="QuickNetworkMonitor.Models">
+
+  <class name="QNMAbout" table="qnm_about">
+    <id name="Id" column="Id">
+      <generator class="native" />
+    </id>
+    <property name="NODE" column="NODE" type="string" length="50" not-null="true"/>
+    <property name="VERSION" column="VERSION" type="string" length="50" not-null="true"/>
+    <property name="DataVersion" column="DataVersion" type="string" length="45" not-null="true"/>
+    <property name="INTERVAL" column="INTERVAL" type="string" length="50" not-null="true"/>
+    <property name="FROM" column="[FROM]" type="DateTime" not-null="true"/>
+    <property name="TO" column="[TO]" type="DateTime" not-null="true"/>
+   
+  </class>
+</hibernate-mapping>
