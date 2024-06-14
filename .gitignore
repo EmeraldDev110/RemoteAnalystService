@@ -1,0 +1,42 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/*/obj
+/.vs/RemoteAnalystAWS/v16
+/*/bin
+/.vs/RemoteAnalystAWS/v15/Server/sqlite3/storage.ide-wal
+/.vs/RemoteAnalystAWS/v15/Server/sqlite3/storage.ide-shm
+/.vs/RemoteAnalystAWS/v15/Server/sqlite3/storage.ide
+/.vs/RemoteAnalystAWS/v15/Server/sqlite3/db.lock
+/.vs/RemoteAnalystAWS/v15
+/.vs
+/packages
+/RemoteAnalyst.ReportGenerator/RemoteAnalyst.ReportGenerator.csproj.LocalToUse
+/RemoteAnalyst.UWSLoader/BLL/SQS/CheckQue - Copy.cs
+/RemoteAnalyst.UWSLoader/BLL/SQS/archives
+/RemoteAnalyst.UWSLoader/BLL/JobRDSMove - Copy.cs
+/RemoteAnalyst.UWSLoader/Program.cs.copy
+/RemoteAnalyst.Scheduler/archives
+/RemoteAnalyst.ReportGenerator/archives
+/RemoteAnalyst.UWSLoader/archive
+/RemoteAnalyst.UWSLoader.Core/archive
+/ConfigurationManager/bin/
+/RemoteAnalyst.UWSLoader.Core/bin/
+/ConfigurationManager/bin/
+/RemoteAnalyst.UWSLoader/JobProcessor/JobProcessorUWS - Copy.cs
+/RemoteAnalyst.UWSLoader/BLL/LicenseChecker - Copy.cs
+/RemoteAnalyst.Repository/Concrete/RemoteAnalystdbSPAM/ProcessEntityTable - Copy.cs
+/RemoteAnalyst.UWSLoader/SPAM/BLL/OpenUWSPathway - Copy.cs.copy
+/RemoteAnalyst.ReportGenerator/BLL/JobScheduleLocalAnalyst.cs.bak
+/RemoteAnalyst.ReportGenerator/Amazon.cs.bak
+/RemoteAnalyst.AWS/EC2/AmazonEC2.cs.bak
+/RemoteAnalyst.AWS/EC2/IAmazonEC2.cs.bak
+/RemoteAnalyst.AWS/Helper.cs.bak
+/RemoteAnalyst.ReportGenerator/BLL/JobScheduleLocalAnalyst.cs.bak
+/RemoteAnalyst.ReportGenerator/Amazon.cs.bak
+/RemoteAnalyst.TRANSMON/BLL/TransMon.cs.bak
+/UpgradeLog.htm
+/RemoteAnalyst.UWSLoader.Core/LoadUWS.cs.original
+*.json
+*.bak
